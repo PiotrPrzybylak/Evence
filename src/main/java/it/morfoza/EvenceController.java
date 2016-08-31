@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 import static jdk.internal.dynalink.support.NameCodec.encode;
 
 @Controller
@@ -33,7 +35,9 @@ public class EvenceController {
 
         Event event = new Event("Sala Dance", "Warszawa", "22.09", 120., "salsa");
 
-        model.addAttribute("");
+
+        List<Event> allEvents = eventRepository.getAllEvents();
+        model.addAttribute("events", allEvents);
 
 
 
