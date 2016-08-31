@@ -1,6 +1,6 @@
 package it.morfoza;
 import java.util.List;
 
-public interface EventsRepository {
+public interface EventRepository {
     List<Event> getAllEvents();
 }

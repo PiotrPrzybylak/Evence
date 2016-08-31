@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class EvenceController {
 
     private EventRepository eventRepository;
+
 @Autowired
     public EvenceController(EventRepository eventRepository) {
         this.eventRepository = eventRepository;
