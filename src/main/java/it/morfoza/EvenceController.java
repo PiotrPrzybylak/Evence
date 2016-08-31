@@ -37,7 +37,7 @@ public class EvenceController {
 
 
 
-        if (eventRepository.cityFormIsEmpty(city)) {
+        if (cityFormIsEmpty(city)) {
             String error = encode("Wpisz nazwę miasta!");
             return "redirect:/admin?error= " + error;
         }
@@ -46,4 +46,11 @@ public class EvenceController {
 
             return "result";
 }
+
+    public static boolean cityFormIsEmpty(String city) {
+        if (city != null) {
+            return true;
+        } else
+        return false;
+    }
 }
