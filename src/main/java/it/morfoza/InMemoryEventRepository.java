@@ -10,4 +10,12 @@ public class InMemoryEventRepository implements EventRepository {
     public List<Event> getAllEvents() {
         return events;
     }
+
+    @Override
+    public boolean cityFormIsEmpty(String city) {
+        if (city != null) {
+            return true;
+        } else
+        return false;
+    }
 }
