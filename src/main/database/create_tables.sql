@@ -8,9 +8,3 @@ CREATE TABLE "events" (
 	PRIMARY KEY ("id")
 )
 ;
-COMMENT ON COLUMN "events"."id" IS E'';
-COMMENT ON COLUMN "events"."eventname" IS E'';
-COMMENT ON COLUMN "events"."city" IS E'';
-COMMENT ON COLUMN "events"."date" IS E'';
-COMMENT ON COLUMN "events"."price" IS E'';
-COMMENT ON COLUMN "events"."dance" IS E'';
