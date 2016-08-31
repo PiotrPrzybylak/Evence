@@ -6,11 +6,11 @@ public class Event {
 
     private String eventName;
     private String city;
-    private SimpleDateFormat date;
+    private String date;
     private double price;
     private String dance;
 
-    public Event (String eventName, String city, SimpleDateFormat date, double price, String dance) {
+    public Event (String eventName, String city, String  date, double price, String dance) {
         this.eventName = eventName;
         this.city = city;
         this.date = date;
@@ -22,18 +22,14 @@ public class Event {
     public String getCity() {return city;}
     public double getPrice() {return price;}
     public String getDance() {return dance;}
-    public SimpleDateFormat getDate() {return date;}
+    public String getDate() {return date;}
 
     public String toString() {
         return eventName + city + date + " Cena " + price + " Taniec " + dance;
     }
 
     public boolean isFree() {
-        if (this.price == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.price == 0;
     }
 
 
