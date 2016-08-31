@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Evence</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+
+<form action="/">
+
+        <p>Jaki taniec Cię interesuje?</p>
+        <input name="dance" />
+        <p>W jakim jesteś mieście?</p>
+        <input name="city" />
+
+        <label for="bezpłatny">bezpłatny</label>
+        <input type="radio" name="price" id="bezpłatny" value="bezpłatny"/><br/>
+        <label for="płatny">płatny</label>
+        <input type="radio" name="price" id="płatny" value="płatny"/><br/>
+        <input type="submit" value="add"/>
+    </form>
+
+</body>
+</html>
