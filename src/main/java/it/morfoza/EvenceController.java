@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import static jdk.internal.dynalink.support.NameCodec.encode;
+
 @Controller
 public class EvenceController {
 
