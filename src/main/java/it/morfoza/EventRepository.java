@@ -5,8 +5,4 @@ public interface EventRepository {
     List<Event> getAllEvents();
 
     Event getByDance(String danceName);
-
-
-    boolean danceFormIsEmpty (String form );
-
 }

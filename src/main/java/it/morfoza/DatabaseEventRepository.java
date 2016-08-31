@@ -21,5 +21,10 @@ public class DatabaseEventRepository implements EventRepository {
                 new EventRowMapper());
     }
 
+    @Override
+    public Event getByDance(String danceName) {
+        return jdbcTemplate.queryForObject("SELECT eventname, city, dance, id, price, date FROM events WHERE dance LIKE ?",
+                new EventRowMapper(), "%" + danceName + "%");
+    }
 
 }

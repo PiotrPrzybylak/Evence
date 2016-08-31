@@ -36,12 +36,6 @@ public class HardcodedEvenceAdvisor implements EventRepository {
         throw new RuntimeException();
     }
 
-    @Override
-    public boolean danceFormIsEmpty(String form) {
-        return false;
-    }
-
-
     public Event getEvent(String danceName) {
         HardcodedEvenceAdvisor hardcodedEvenceAdvisor=new HardcodedEvenceAdvisor();
         return hardcodedEvenceAdvisor.getByDance(danceName);
