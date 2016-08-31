@@ -23,9 +23,4 @@ public class HardcodedEvenceAdvisor implements EventRepository{
         return null;
     }
 
-
-    public boolean cityFormIsEmpty(String city) {
-        return city != null;
-    }
-
 }

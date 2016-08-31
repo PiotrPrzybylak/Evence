@@ -41,14 +41,22 @@ public class EvenceController {
 
 
 
-        if (eventRepository.cityFormIsEmpty(city)) {
-            return "result";
-        }
-        else{
+        if (isStringEmpty(city)) {
             String error = encode("Wpisz nazwę miasta!");
             return "redirect:/admin?error= " + error;
         }
 
+        if (isStringEmpty(dance)) {
+            String error = encode("Wpisz nazwę tańca!");
+            return "redirect:/admin?error= " + error;
+        }
+
+
+        return "result";
+    }
+
+    private boolean isStringEmpty(String string) {
+        return string == null || string.equals("");
     }
 
 }
