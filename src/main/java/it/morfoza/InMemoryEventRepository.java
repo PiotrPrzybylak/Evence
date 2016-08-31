@@ -3,7 +3,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class InMemoryEventRepository implements EventRepository {
     private List<Event> events = new ArrayList<>();
     @Override
@@ -11,8 +11,21 @@ public class InMemoryEventRepository implements EventRepository {
         return events;
     }
 
+    @Override
+    public Event getByDance(String danceName) {
+        return null;
+    }
+
+    @Override
+    public boolean danceFormIsEmpty(String form) {
+        return false;
+    }
+
 
     public boolean cityFormIsEmpty(String city) {
-        return city != null;
+        if (city != null) {
+            return true;
+        } else
+        return false;
     }
 }
