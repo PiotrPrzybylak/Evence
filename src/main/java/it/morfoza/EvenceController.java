@@ -1,3 +1,5 @@
+package it.morfoza;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,5 +20,21 @@ public class EvenceController {
                                @RequestParam(value = "price", required = true) String price,Model model){
 
     return "wynikiWyszukiwania";}
+
+    @RequestMapping("/")
+    public String form() {
+        return "main";
+    }
+
+    @RequestMapping("/signup")
+    public String user(@RequestParam(value = "email") String email,
+                       @RequestParam(value = "password") String password) {
+        User user = new User(email,password);
+        return "redirect/formularz";
+
+
+    }
+
+
 }
 
