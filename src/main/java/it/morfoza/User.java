@@ -3,7 +3,7 @@ package it.morfoza;
 /**
  * Created by michalina on 31/08/16.
  */
-public class User implements UserInterface {
+public class User  {
 
     private String email;
     private String password;
@@ -15,8 +15,5 @@ public class User implements UserInterface {
     }
 
 
-    @Override
-    public void isUserLoggedIn() {
 
-    }
 }
