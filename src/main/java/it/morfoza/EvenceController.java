@@ -13,7 +13,7 @@ public class EvenceController {
 
     private EventRepository eventRepository;
 
-@Autowired
+    @Autowired
     public EvenceController(EventRepository eventRepository) {
         this.eventRepository = eventRepository;
     }
@@ -31,7 +31,7 @@ public class EvenceController {
                                @RequestParam(value = "date", required = false) String date,
                                @RequestParam(value = "price", required = false) String price, Model model) throws EmptyCityFormException {
 
-            Event event = new Event("Sala Dance", "Warszawa", "22.09", 120.,"salsa");
+        Event event = new Event("Sala Dance", "Warszawa", "22.09", 120., "salsa");
 
         model.addAttribute("");
 
@@ -44,6 +44,8 @@ public class EvenceController {
 
 
 
-            return "result";
-}
+    */
+        return "result";
+    }
+
 }
