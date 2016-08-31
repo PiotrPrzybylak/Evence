@@ -26,9 +26,11 @@ public class EvenceController {
     @RequestMapping("/wynikiWyszukiwania")
     public String dodajProdukt(@RequestParam(value = "dance", required = true) String dance,
                                @RequestParam(value = "city", required = true) String city,
-                               @RequestParam(value = "price", required = true) String price, Model model) {
+                               @RequestParam(value = "price", required = false) String price, Model model) {
 
-        return "wynikiWyszukiwania";
+
+
+        return "result";
     }
 }
 
