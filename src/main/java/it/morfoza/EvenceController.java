@@ -26,11 +26,20 @@ public class EvenceController {
     @RequestMapping("/wynikiWyszukiwania")
     public String dodajProdukt(@RequestParam(value = "dance", required = true) String dance,
                                @RequestParam(value = "city", required = true) String city,
-                               @RequestParam(value = "price", required = false) String price, Model model) {
+                               @RequestParam(value = "date", required = true) String date,
+                               @RequestParam(value = "price", required = true) String price, Model model) throws EmptyCityFormException {
 
 
 
-        return "result";
-    }
+
+
+        if (eventRepository.cityFormIsEmpty(city)) {
+            String error = encode("Wpisz nazwę miasta!");
+            return "redirect:/admin?error= " + error;
+        }
+
+
+
+            return "result";
 }
-
+}
