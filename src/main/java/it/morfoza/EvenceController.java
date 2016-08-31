@@ -12,7 +12,6 @@ import static jdk.internal.dynalink.support.NameCodec.encode;
 public class EvenceController {
 
     private EventRepository eventRepository;
-    private HardcodedEvenceAdvisor hardcodedEvenceAdvisor;
 
     @Autowired
     public EvenceController(EventRepository eventRepository) {
@@ -43,7 +42,7 @@ public class EvenceController {
         }
 
 
-        model.addAttribute("event", hardcodedEvenceAdvisor.getEvent(dance));
+        model.addAttribute("event", eventRepository.getByDance(dance));
         model.addAttribute("dance", dance);
         model.addAttribute("city", city);
         model.addAttribute("date", date);
