@@ -31,7 +31,9 @@ public class EvenceController {
                                @RequestParam(value = "date", required = true) String date,
                                @RequestParam(value = "price", required = true) String price, Model model) throws EmptyCityFormException {
 
+            Event event = new Event("Sala Dance", "Warszawa", "22.09", 120.,"salsa");
 
+        model.addAttribute("");
 
 
 
