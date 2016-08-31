@@ -1,10 +1,20 @@
-CREATE TABLE "events" (
-	"id" SERIAL NOT NULL,
-	"eventname" VARCHAR NULL DEFAULT NULL,
-	"city" VARCHAR NULL DEFAULT NULL,
-	"date" VARCHAR NULL DEFAULT NULL,
-	"price" DOUBLE PRECISION NOT NULL DEFAULT E'true',
-	"dance" VARCHAR NOT NULL,
-	PRIMARY KEY ("id")
+CREATE SEQUENCE public.events_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 6
+  CACHE 1;
+
+CREATE TABLE public.events
+(
+  eventname character varying,
+  city character varying,
+  dance character varying NOT NULL,
+  id integer NOT NULL DEFAULT nextval('events_id_seq'::regclass),
+  price double precision,
+  date date,
+  CONSTRAINT id PRIMARY KEY (id)
 )
-;
+WITH (
+  OIDS=FALSE
+);
