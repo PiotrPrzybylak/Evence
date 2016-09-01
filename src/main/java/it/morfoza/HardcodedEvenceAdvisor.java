@@ -1,5 +1,7 @@
 package it.morfoza;
 
+import org.springframework.ui.Model;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,5 +42,8 @@ public class HardcodedEvenceAdvisor implements EventRepository {
     public List<Event> getEvent(String danceName) {
         HardcodedEvenceAdvisor hardcodedEvenceAdvisor=new HardcodedEvenceAdvisor();
         return hardcodedEvenceAdvisor.getByDance(danceName);
+    }
+
+    public void daneEventu(String balanga, String warszawa, int i, String salsa, String s, Model model) {
     }
 }
