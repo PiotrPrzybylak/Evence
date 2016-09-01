@@ -2,7 +2,6 @@ package it.morfoza;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,11 +36,4 @@ public class HardcodedEventRepository implements EventRepository {
         throw new RuntimeException();
     }
 
-    public List<Event> getEvent(String danceName) {
-        HardcodedEventRepository hardcodedEvenceAdvisor=new HardcodedEventRepository();
-        return hardcodedEvenceAdvisor.getByDance(danceName);
-    }
-
-    public void daneEventu(String balanga, String warszawa, int i, String salsa, String s, Model model) {
-    }
 }
