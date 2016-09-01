@@ -19,17 +19,15 @@ public class EvenceController {
     }
 
     @RequestMapping("/")
-
-    public String getAllEvents(Model model) {
-        model.addAttribute("events", eventRepository.getAllEvents());
-        return "formularz";
+    public String home() {
+        return "home";
     }
 
-    @RequestMapping("/wynikiWyszukiwania")
-    public String getEvent(@RequestParam(value = "dance", required = false) String dance,
-                           @RequestParam(value = "city", required = false) String city,
-                           @RequestParam(value = "date", required = false) String date,
-                           @RequestParam(value = "price", required = false) String price, Model model) {
+    @RequestMapping("/events")
+    public String events(@RequestParam(value = "dance", required = false) String dance,
+                         @RequestParam(value = "city", required = false) String city,
+                         @RequestParam(value = "date", required = false) String date,
+                         @RequestParam(value = "price", required = false) String price, Model model) {
 
         if (isStringEmpty(city)) {
             String error = encode("Wpisz nazwę miasta!");
@@ -47,7 +45,7 @@ public class EvenceController {
         model.addAttribute("city", city);
         model.addAttribute("date", date);
 
-        return "wynikiWyszukiwania";
+        return "events";
 
     }
 
