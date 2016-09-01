@@ -29,18 +29,14 @@ public class HardcodedEventRepositoryTest {
     }
 
     @Test
-    public void shouldThrowExceptionWhenNoEventFound() {
+    public void shouldReturnEmptyList() {
         // Given
         HardcodedEventRepository sut = new HardcodedEventRepository();
 
-        try {
-            sut.getByDance("tralalala");
-            fail("should have exception");
-        } catch (RuntimeException e) {
-            // Then
-            assertThat(e).hasMessage("event not found");
-        }
+        // When
+        List<Event> result = sut.getByDance("tralalala");
 
+        // Then
+        assertThat(result).hasSize(0);
     }
-
 }

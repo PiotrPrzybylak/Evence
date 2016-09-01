@@ -33,7 +33,7 @@ public class HardcodedEventRepository implements EventRepository {
                 return chosenEventList;
             }
         }
-        throw new RuntimeException("event not found");
+        return chosenEventList;
     }
 
 }
