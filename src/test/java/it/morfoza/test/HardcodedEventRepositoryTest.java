@@ -38,7 +38,9 @@ public class HardcodedEventRepositoryTest {
             fail("should have exception");
         } catch (RuntimeException e) {
             // Then
+            assertThat(e).hasMessage("event not found");
         }
+
     }
 
 }
