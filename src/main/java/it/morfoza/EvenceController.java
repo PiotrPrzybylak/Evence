@@ -31,12 +31,12 @@ public class EvenceController {
 
         if (isStringEmpty(city)) {
             String error = encode("Wpisz nazwę miasta!");
-            return "redirect:/admin?error= " + error;
+            return "redirect:/?error= " + error;
         }
 
         if (isStringEmpty(dance)) {
             String error = encode("Wpisz styl tańca!");
-            return "redirect:/admin?error= " + error;
+            return "redirect:/?error= " + error;
         }
 
 
