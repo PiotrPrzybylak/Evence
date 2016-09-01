@@ -25,7 +25,7 @@ public class Event {
     public String getDate() {return date;}
 
     public String toString() {
-        return eventName + city + date + " Cena " + price + " Taniec " + dance;
+        return eventName + city + date + " Price: " + price + " Dance: " + dance;
     }
 
     public boolean isFree() {
