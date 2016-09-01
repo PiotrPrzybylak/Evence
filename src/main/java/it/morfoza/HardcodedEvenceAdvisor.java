@@ -26,17 +26,18 @@ public class HardcodedEvenceAdvisor implements EventRepository {
     }
 
     @Override
-    public Event getByDance(String danceName) {
-
+    public List<Event> getByDance(String danceName) {
+        List<Event> chosenEventList =new ArrayList<>();
         for (Event event : eventList) {
             if (event.getDance().equals(danceName)) {
-                return event;
+                chosenEventList.add(event);
+                return chosenEventList;
             }
         }
         throw new RuntimeException();
     }
 
-    public Event getEvent(String danceName) {
+    public List<Event> getEvent(String danceName) {
         HardcodedEvenceAdvisor hardcodedEvenceAdvisor=new HardcodedEvenceAdvisor();
         return hardcodedEvenceAdvisor.getByDance(danceName);
     }
