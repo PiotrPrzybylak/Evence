@@ -15,7 +15,7 @@ public class HardcodedEventRepository implements EventRepository {
     public HardcodedEventRepository() {
         eventList.add(new Event("Salsa Dance", "Warszawa", "2016-12-03", 0, "salsa"));
         eventList.add(new Event("Jazz", "Wrocław", "12.10", 120, "jazz"));
-        eventList.add(new Event("Dupa Dance", "Łódź", "09.12", 666, "luźny styl"));
+        eventList.add(new Event("Dupa Dance", "Łódź", "09.12", 666, "salsa"));
         eventList.add(new Event("Tańczy się tylko raz", "Kraków", "22.10", 0, "hip-hop"));
     }
 
@@ -30,7 +30,6 @@ public class HardcodedEventRepository implements EventRepository {
         for (Event event : eventList) {
             if (event.getDance().equals(danceName)) {
                 chosenEventList.add(event);
-                return chosenEventList;
             }
         }
         return chosenEventList;

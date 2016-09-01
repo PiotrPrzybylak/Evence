@@ -20,12 +20,12 @@ public class HardcodedEventRepositoryTest {
         HardcodedEventRepository sut = new HardcodedEventRepository();
 
         // When
-        List<Event> events = sut.getByDance("salsa");
+        List<Event> events = sut.getByDance("jazz");
 
         // Then
         assertThat(events).hasSize(1);
         Event event1 = events.get(0);
-        assertThat(event1.getEventName()).isEqualTo("Salsa Dance");
+        assertThat(event1.getEventName()).isEqualTo("Jazz");
     }
 
     @Test
@@ -39,4 +39,18 @@ public class HardcodedEventRepositoryTest {
         // Then
         assertThat(result).hasSize(0);
     }
+
+    @Test
+    public void shouldDisplayTwoMatchingEvents() {
+
+        // Given
+        HardcodedEventRepository sut = new HardcodedEventRepository();
+
+        // When
+        List<Event> events = sut.getByDance("salsa");
+
+        // Then
+        assertThat(events).hasSize(2);
+    }
+
 }
