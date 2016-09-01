@@ -9,11 +9,11 @@ import java.util.List;
 
 @Component
 @Profile("demo")
-public class HardcodedEvenceAdvisor implements EventRepository {
+public class HardcodedEventRepository implements EventRepository {
 
     private List<Event> eventList = new ArrayList<>();
 
-    public HardcodedEvenceAdvisor() {
+    public HardcodedEventRepository() {
         eventList.add(new Event("Salsa Dance", "Warszawa", "2016-12-03", 0, "salsa"));
         eventList.add(new Event("Jazz", "Wrocław", "12.10", 120, "jazz"));
         eventList.add(new Event("Dupa Dance", "Łódź", "09.12", 666, "luźny styl"));
@@ -38,7 +38,7 @@ public class HardcodedEvenceAdvisor implements EventRepository {
     }
 
     public List<Event> getEvent(String danceName) {
-        HardcodedEvenceAdvisor hardcodedEvenceAdvisor=new HardcodedEvenceAdvisor();
+        HardcodedEventRepository hardcodedEvenceAdvisor=new HardcodedEventRepository();
         return hardcodedEvenceAdvisor.getByDance(danceName);
     }
 
