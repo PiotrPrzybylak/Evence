@@ -2,15 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Evence</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 
-
+<div th:each="event:${events}">
     <p>
         <span th:text="${event.eventName}"></span>
         <span th:text="${event.city}"></span>
         <span th:text="${event.price}"></span>
     </p>
+</div>
 </body>
 </html>

@@ -42,7 +42,7 @@ public class EvenceController {
         }
 
 
-        model.addAttribute("event", eventRepository.getByDance(dance));
+        model.addAttribute("events", eventRepository.getByDance(dance));
         model.addAttribute("dance", dance);
         model.addAttribute("city", city);
         model.addAttribute("date", date);
