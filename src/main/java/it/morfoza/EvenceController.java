@@ -29,7 +29,7 @@ public class EvenceController {
     public String getEvent(@RequestParam(value = "dance", required = false) String dance,
                            @RequestParam(value = "city", required = false) String city,
                            @RequestParam(value = "date", required = false) String date,
-                           @RequestParam(value = "price", required = false) String price, Model model) throws EmptyCityFormException {
+                           @RequestParam(value = "price", required = false) String price, Model model) {
 
         if (isStringEmpty(city)) {
             String error = encode("Wpisz nazwę miasta!");
