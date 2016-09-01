@@ -9,7 +9,6 @@ import java.util.List;
 public class HardcodedEvenceAdvisor implements EventRepository {
 
     private List<Event> eventList = new ArrayList<>();
-    private List<Event> chosenEventList = new ArrayList<>();
 
 
     public HardcodedEvenceAdvisor() {
@@ -28,7 +27,7 @@ public class HardcodedEvenceAdvisor implements EventRepository {
 
     @Override
     public List<Event> getByDance(String danceName) {
-
+        List<Event> chosenEventList =new ArrayList<>();
         for (Event event : eventList) {
             if (event.getDance().equals(danceName)) {
                 chosenEventList.add(event);
