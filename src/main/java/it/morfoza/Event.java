@@ -1,5 +1,6 @@
 package it.morfoza;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 
 public class Event {
@@ -10,11 +11,11 @@ public class Event {
     private Money price;
     private String dance;
 
-    public Event (String eventName, String city, String  date, double price, String dance) {
+    public Event (String eventName, String city, String  date, Money price, String dance) {
         this.eventName = eventName;
         this.city = city;
         this.date = date;
-        this.price = new Money(price);
+        this.price = price;
         this.dance = dance;
     }
 

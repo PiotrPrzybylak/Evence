@@ -13,6 +13,10 @@ public class Money {
         this.value = new BigDecimal(value);
     }
 
+    public Money(BigDecimal value) {
+        this.value = value;
+    }
+
 
     public double getDoubleValue() {
         return value.doubleValue();
