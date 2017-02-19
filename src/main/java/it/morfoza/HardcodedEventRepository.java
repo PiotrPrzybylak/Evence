@@ -13,10 +13,10 @@ public class HardcodedEventRepository implements EventRepository {
     private List<Event> eventList = new ArrayList<>();
 
     public HardcodedEventRepository() {
-        eventList.add(new Event("Salsa Dance", "Warszawa", "2016-12-03", 0, "salsa"));
-        eventList.add(new Event("Jazz", "Wrocław", "12.10", 120, "jazz"));
-        eventList.add(new Event("Dupa Dance", "Łódź", "09.12", 666, "salsa"));
-        eventList.add(new Event("Tańczy się tylko raz", "Kraków", "22.10", 0, "hip-hop"));
+        eventList.add(new Event("Salsa Dance", "Warszawa", "2016-12-03", new Money(0), "salsa"));
+        eventList.add(new Event("Jazz", "Wrocław", "12.10", new Money(120), "jazz"));
+        eventList.add(new Event("Dupa Dance", "Łódź", "09.12", new Money(666), "salsa"));
+        eventList.add(new Event("Tańczy się tylko raz", "Kraków", "22.10", new Money(0), "hip-hop"));
     }
 
     @Override
