@@ -11,11 +11,11 @@ import static jdk.internal.dynalink.support.NameCodec.encode;
 @Controller
 public class EvenceController {
 
-    private EventRepository eventRepository;
+    private EventService eventService;
 
     @Autowired
-    public EvenceController(EventRepository eventRepository) {
-        this.eventRepository = eventRepository;
+    public EvenceController( EventService eventService) {
+        this.eventService = eventService;
     }
 
     @RequestMapping("/")
@@ -40,7 +40,7 @@ public class EvenceController {
         }
 
 
-        model.addAttribute("events", eventRepository.getByDance(dance));
+        model.addAttribute("events", eventService.getByDance(dance));
         model.addAttribute("dance", dance);
         model.addAttribute("city", city);
         model.addAttribute("date", date);
